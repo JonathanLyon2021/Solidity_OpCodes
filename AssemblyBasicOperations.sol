@@ -13,4 +13,12 @@ contract AssemblyBasicOperations {
                jumpi(loop, lt(i, 10))
         }
     }
+    
+    function normalIf(uint num1, uint num2) public view returns (uint result) {
+        if (num1 > num2) {
+            result = num1;
+        } else {
+            result = num2;
+        }
+    }
 }
