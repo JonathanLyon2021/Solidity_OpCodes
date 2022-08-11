@@ -4,4 +4,12 @@ contract MemoryOperationsDemo {
             sum = arr[i] + sum;
         }
     }
+    
+     function asmSumOfArray(uint[] arr) public view returns (uint sum) {
+        assembly {
+            let len := mload(arr)
+            let elAddress := add(arr, 0x20)
+            let i := 0
+        }
+     }
 }
