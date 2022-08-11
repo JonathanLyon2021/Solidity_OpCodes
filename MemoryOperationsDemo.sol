@@ -27,4 +27,21 @@ contract MemoryOperationsDemo {
         
         return arr;
     }
+    
+     function asmScaleArray(uint[] arr) public view returns (uint[] result) {
+        assembly {
+            let len := mload(arr)
+            let elAddress := add(arr, 0x20)
+            let i := 0
+            let element := 0
+            
+              mstore(0x0, 0x20) // store the data type in mem[0]. 0x20 means one-dimensional dynamic array
+            mstore(0x20, len) // store the length in mem[1]
+            
+                    
+            // return mem[0..len+2]
+            return(0x0, add(0x40, mul(len, 0x20)))
+          
+        }
+    }
 }
