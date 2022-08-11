@@ -10,6 +10,13 @@ contract MemoryOperationsDemo {
             let len := mload(arr)
             let elAddress := add(arr, 0x20)
             let i := 0
+            
+              loop:
+                sum := add(sum, mload(elAddress))
+                elAddress := add(elAddress, 0x20)
+                
+                i := add(i, 1)
+                jumpi(loop, lt(i, len))
         }
      }
 }
