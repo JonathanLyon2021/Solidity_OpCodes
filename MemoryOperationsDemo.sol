@@ -19,4 +19,12 @@ contract MemoryOperationsDemo {
                 jumpi(loop, lt(i, len))
         }
      }
+     
+      function normalScaleArray(uint[] arr) public view returns (uint[] result) {
+        for (uint i = 0; i < arr.length; i++) {
+            arr[i] = arr[i] * 2;
+        }
+        
+        return arr;
+    }
 }
