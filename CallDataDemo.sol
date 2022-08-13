@@ -16,4 +16,12 @@ contract CalldataDemo {
         
         return sum;
     }
+    
+     function scaleArrayPublic(uint[] arr) public returns (uint[]) {
+        for (uint i = 0; i < arr.length; i++) {
+            arr[i] *= 2;
+        }
+        
+        return arr;
+    }
 }
