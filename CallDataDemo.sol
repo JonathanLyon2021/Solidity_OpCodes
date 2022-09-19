@@ -4,7 +4,6 @@ contract CalldataDemo {
         for (uint i = 0; i < arr.length; i++) {
             sum += arr[i];
         }
-        
         return sum;
     }
     
@@ -13,7 +12,6 @@ contract CalldataDemo {
         for (uint i = 0; i < arr.length; i++) {
             sum += arr[i];
         }
-        
         return sum;
     }
     
@@ -21,7 +19,6 @@ contract CalldataDemo {
         for (uint i = 0; i < arr.length; i++) {
             arr[i] *= 2;
         }
-        
         return arr;
     }
     
@@ -30,7 +27,6 @@ contract CalldataDemo {
     //         // This will not work. calldata is read-only in external functions
     //         arr[i] *= 2;
     //     }
-        
     //     return arr;
     // }
 }
